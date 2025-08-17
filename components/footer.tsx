@@ -80,7 +80,6 @@ export default function Footer() {
             <h3 className="font-medium mb-3">{t("footer.contact.title")}</h3>
             <ul className="space-y-2 text-sm">
               <li className="text-muted-foreground">{t("footer.contact.name")}</li>
-              <li className="text-muted-foreground">{t("footer.contact.phone")}</li>
               <li>
                 <LocalizedLink href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">
                   {t("footer.contact.contactUs")}

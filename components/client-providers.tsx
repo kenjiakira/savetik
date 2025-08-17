@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import { useState, useEffect } from "react"
-import { SessionProvider } from "next-auth/react"
+
 import { ThemeProvider } from "@/components/theme-provider"
 import { I18nProvider } from "@/lib/i18n-client"
 
@@ -37,18 +37,16 @@ export default function ClientProviders({
   }
 
   return (
-    <SessionProvider>
-      <I18nProvider locale={locale as "en" | "vi"}>
-        <ThemeProvider 
-          attribute="class" 
-          defaultTheme="system"
-          enableSystem={true}
-          disableTransitionOnChange
-          storageKey={THEME_STORAGE_KEY}
-        >
-          {mounted ? children : <div style={{ visibility: 'hidden' }}>{children}</div>}
-        </ThemeProvider>
-      </I18nProvider>
-    </SessionProvider>
+    <I18nProvider locale={locale as "en" | "vi"}>
+      <ThemeProvider 
+        attribute="class" 
+        defaultTheme="system"
+        enableSystem={true}
+        disableTransitionOnChange
+        storageKey={THEME_STORAGE_KEY}
+      >
+        {mounted ? children : <div style={{ visibility: 'hidden' }}>{children}</div>}
+      </ThemeProvider>
+    </I18nProvider>
   )
 }
