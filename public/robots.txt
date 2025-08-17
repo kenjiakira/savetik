@@ -1,0 +1,11 @@
+# Savetik.vn Robots.txt
+User-agent: *
+Allow: /
+
+# Không index cho các trang quản trị
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /api/
+
+# Sitemap
+Sitemap: https://savetik.vn/sitemap.xml
