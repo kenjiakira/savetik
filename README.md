@@ -249,15 +249,6 @@ This project is distributed under the MIT License. See `LICENSE` file for detail
 
 This project is for educational and research purposes only. Users must comply with TikTok's terms of service and local laws. We are not responsible for misuse.
 
-<<<<<<< HEAD
-=======
-### 📞 Contact
-
-- **Email**: [your-email@example.com]
-- **Website**: [your-website.com]
-- **GitHub**: [your-github-profile]
-
->>>>>>> f976ac51db659773413dd122c1cd9cbaa4a1d7b7
 ### 🙏 Acknowledgments
 
 - [TikTok](https://www.tiktok.com/) - Original platform
@@ -508,15 +499,6 @@ Dự án này được phân phối dưới MIT License. Xem file `LICENSE` đ�
 
 Dự án này chỉ được sử dụng cho mục đích giáo dục và nghiên cứu. Người dùng cần tuân thủ các điều khoản sử dụng của TikTok và luật pháp địa phương. Chúng tôi không chịu trách nhiệm về việc sử dụng sai mục đích.
 
-<<<<<<< HEAD
-=======
-### 📞 Liên hệ
-
-- **Email**: [your-email@example.com]
-- **Website**: [your-website.com]
-- **GitHub**: [your-github-profile]
-
->>>>>>> f976ac51db659773413dd122c1cd9cbaa4a1d7b7
 ### 🙏 Acknowledgments
 
 - [TikTok](https://www.tiktok.com/) - Platform gốc
