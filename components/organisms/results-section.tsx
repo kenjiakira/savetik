@@ -27,22 +27,22 @@ export function ResultsSection({
 
   return (
     <div className="mt-12 md:mt-20">
-      <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">
-        {t("home.results.title")}
-      </h2>
-
-      <div className="bg-background rounded-lg border p-6 max-w-3xl mx-auto shadow-sm">
+      <div className="max-w-4xl mx-auto">
         {!result && !loading && (
-          <div className="flex flex-col items-center justify-center py-12 text-center">
-            <p className="text-muted-foreground mb-2">{t("home.results.empty")}</p>
-            <Download className="h-12 w-12 text-muted-foreground/50" />
+          <div className="flex flex-col items-center justify-center py-16 text-center">
+            <div className="w-16 h-16 rounded-full bg-muted/50 flex items-center justify-center mb-4">
+              <Download className="h-8 w-8 text-muted-foreground" />
+            </div>
+            <p className="text-muted-foreground text-lg">{t("home.results.empty")}</p>
           </div>
         )}
 
         {loading && (
-          <div className="flex flex-col items-center justify-center py-12">
-            <Loader2 className="h-12 w-12 animate-spin text-primary mb-4" />
-            <p className="text-muted-foreground">{t("home.results.processing")}</p>
+          <div className="flex flex-col items-center justify-center py-16">
+            <div className="w-16 h-16 rounded-full bg-muted/50 flex items-center justify-center mb-4">
+              <Loader2 className="h-8 w-8 animate-spin text-primary" />
+            </div>
+            <p className="text-muted-foreground text-lg">{t("home.results.processing")}</p>
           </div>
         )}
 

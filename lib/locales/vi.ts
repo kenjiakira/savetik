@@ -24,6 +24,7 @@ export default {
     form: {
       placeholder: "Dán liên kết TikTok vào đây...",
       button: "Tải xuống",
+      paste: "Dán",
       processing: "Đang xử lý",
       support: "Hỗ trợ tất cả video TikTok, bao gồm cả Slideshow và các video có nhạc",
     },
@@ -41,6 +42,7 @@ export default {
       downloadVideo: "Tải Video",
       downloadMusic: "Tải nhạc",
       image: "Ảnh",
+      share: "Chia sẻ video này",
     },
     features: {
       title: "Tại sao chọn Savetik?",
@@ -191,8 +193,6 @@ export default {
     contact: {
       title: "Liên hệ",
       intro: "Nếu bạn có bất kỳ câu hỏi nào về Chính sách Bảo mật này, vui lòng liên hệ với chúng tôi:",
-      name: "Hoàng Ngọc Từ",
-      phone: "Điện thoại: 0354683398",
       email: "Email: contact@savetik.com"
     }
   },

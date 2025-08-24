@@ -21,18 +21,19 @@ export function ImagesResult({
   generateFileName 
 }: ImagesResultProps) {
   return (
-    <div className="flex flex-col items-center">
-      <div className="w-full max-w-md mx-auto mb-6">
-        <h3 className="font-medium text-lg mb-4 line-clamp-2">
+    <div className="space-y-8">
+      <div className="text-center">
+        <h3 className="text-xl font-semibold mb-2 line-clamp-2">
           {result.title || "TikTok Video"}
         </h3>
-
         <AuthorInfo
           avatar={result.author.avatar}
           nickname={result.author.nickname}
           uniqueId={result.author.unique_id}
         />
+      </div>
 
+      <div className="max-w-md mx-auto">
         <DownloadActions
           result={result}
           downloadLoading={downloadLoading}

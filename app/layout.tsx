@@ -1,11 +1,8 @@
 import type React from "react"
 import "./globals.css"
 import type { Metadata, Viewport } from "next"
-import { Inter } from "next/font/google"
 import ClientProviders from "@/components/client-providers"
 import { defaultLocale } from "@/lib/i18n"
-
-const inter = Inter({ subsets: ["latin", "vietnamese"] })
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -114,7 +111,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="vi" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className="font-sans">
         <ClientProviders locale={defaultLocale}>
           {children}
         </ClientProviders>

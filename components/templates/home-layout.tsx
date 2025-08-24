@@ -1,8 +1,7 @@
 "use client"
 
-import { AppHeader } from "@/components/organisms/app-header"
+import { AppHeader } from "@/components/header"
 import { HeroSection } from "@/components/organisms/hero-section"
-import { SearchForm } from "@/components/molecules/search-form"
 import { ResultsSection } from "@/components/organisms/results-section"
 import { FeaturesSection } from "@/components/organisms/features-section"
 import { HowToSection } from "@/components/organisms/how-to-section"
@@ -26,15 +25,8 @@ export function HomeLayout() {
       <AppHeader />
 
       <main className="flex-1">
+        <HeroSection onSubmit={handleSubmit} loading={loading} error={error} />
         <section className="container mx-auto px-4 py-8 md:py-12">
-          <HeroSection />
-
-          <SearchForm
-            onSubmit={handleSubmit}
-            loading={loading}
-            error={error}
-          />
-
           <ResultsSection
             result={result}
             loading={loading}

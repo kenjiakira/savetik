@@ -24,18 +24,18 @@ export function ImageGallery({
   return (
     <div className={`grid ${isMobile ? 'grid-cols-1' : 'grid-cols-3'} gap-6`}>
       {images.map((image, index) => (
-        <div key={index} className="space-y-2">
-          <div className="relative aspect-[4/5] rounded-lg overflow-hidden group">
+        <div key={index} className="group">
+          <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-lg">
             <img
               src={image}
               alt={`${t("home.results.image")} ${index + 1}`}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover transition-transform group-hover:scale-105"
             />
-            <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+            <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
               <Button
-                variant="outline"
-                size="lg"
-                className="text-white border-white hover:text-white hover:border-white" 
+                variant="ghost"
+                size="icon"
+                className="h-12 w-12 rounded-full bg-white/20 text-white hover:bg-white/30 hover:scale-110 transition-all" 
                 onClick={() => onDownloadImage(
                   image, 
                   `${generateFileName('image')}_${index + 1}.jpg`
@@ -49,27 +49,6 @@ export function ImageGallery({
                 )}
               </Button>
             </div>
-          </div>
-          <div className="flex items-center justify-between px-1">
-            <span className="text-sm text-muted-foreground">
-              {t("home.results.image")} {index + 1}
-            </span>
-            <Button
-              variant="ghost"
-              size="sm"
-              className="text-muted-foreground hover:text-foreground"
-              onClick={() => onDownloadImage(
-                image,
-                `${generateFileName('image')}_${index + 1}.jpg`
-              )}
-              disabled={downloadLoading}
-            >
-              {downloadLoading ? (
-                <Loader2 className="h-4 w-4 animate-spin" />
-              ) : (
-                <Download className="h-4 w-4" />
-              )}
-            </Button>
           </div>
         </div>
       ))}
