@@ -19,27 +19,28 @@ export function VideoResult({
   generateFileName 
 }: VideoResultProps) {
   return (
-    <div className="flex flex-col items-center">
-      <div className="w-full max-w-3xl mx-auto mb-6">
-        <h3 className="font-medium text-lg mb-4 line-clamp-2">
+    <div className="space-y-8">
+      <div className="text-center">
+        <h3 className="text-xl font-semibold mb-2 line-clamp-2">
           {result.title || "TikTok Video"}
         </h3>
-
         <AuthorInfo
           avatar={result.author.avatar}
           nickname={result.author.nickname}
           uniqueId={result.author.unique_id}
         />
+      </div>
 
-        <div className="w-full bg-black rounded-lg mb-6 overflow-hidden">
-          <VideoPlayer
-            src={result.play}
-            poster={result.origin_cover}
-            preload="metadata"
-            className="w-full"
-          />
-        </div>
+      <div className="w-full max-w-2xl mx-auto bg-black rounded-2xl overflow-hidden shadow-2xl">
+        <VideoPlayer
+          src={result.play}
+          poster={result.origin_cover}
+          preload="metadata"
+          className="w-full"
+        />
+      </div>
 
+      <div className="max-w-md mx-auto">
         <DownloadActions
           result={result}
           downloadLoading={downloadLoading}

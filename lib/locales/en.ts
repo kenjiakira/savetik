@@ -24,6 +24,7 @@ export default {
     form: {
       placeholder: "Paste TikTok link here...",
       button: "Download",
+      paste: "Paste",
       processing: "Processing",
       support: "Supports all TikTok videos, including Slideshows and videos with music",
     },
@@ -46,6 +47,7 @@ export default {
       downloadVideo: "Download Video",
       downloadMusic: "Download Music",
       image: "Image",
+      share: "Share this video",
     },
     features: {
       title: "Why Choose Savetik?",
@@ -211,8 +213,6 @@ export default {
     contact: {
       title: "Contact Us",
       intro: "If you have any questions about this Privacy Policy, please contact us:",
-      name: "Hoang Ngoc Tu",
-      phone: "Phone: 0354683398",
       email: "Email: contact@savetik.com"
     }
   },
